@@ -12,15 +12,15 @@ function addTodo(text) {
 }
 
 const form = document.querySelector('.js-form')
-form.addEventListener('sumbit', e => {
-	e.preventDefault()
+form.addEventListener('submit', event => {
+	event.preventDefault()
 
-	const input = document.querySelector('js-todo-input')
+	const input = document.querySelector('.input')
 
 	const text = input.value.trim()
 	if (text !== '') {
-		add(text)
+		addTodo(text)
 		input.value = ''
-		input.focuse()
+		input.focus()
 	}
 })

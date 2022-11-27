@@ -8,20 +8,21 @@
 		<script src="script.js" defer></script>
 	</head>
 	<body>
-		<div class="container">
-			<h1 class="app-title">todos</h1>
-			<ul class="todo-list js-todo-list"></ul>
-
-			<form class="js-form">
-				<input
-					autofocus
-					type="text"
-					aria-label="Enter a new todo item"
-					placeholder="E.g. Build a web app"
-					class="js-todo-input"
-				/>
-			</form>
-		</div>
+		<h1>todos</h1>
+		<form id="form" class="js-form">
+			<input
+				type="text"
+				id="input"
+				class="input"
+				placeholder="Enter your todo"
+				autocomplete="off"
+			/>
+			<ul class="todos" id="todos"></ul>
+		</form>
+		<small
+			>Left click to toggle complete. <br />Right click to delete the
+			todo.</small
+		>
 	</body>
 </html>
 
