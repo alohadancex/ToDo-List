@@ -1,18 +1,3 @@
-const input = document.querySelector('.js-todo-input')
-
-const form = document.querySelector('.js-form')
-form.addEventListener('submit', e => {
-	e.preventDefault()
-})
-
-const text = input.value.trim()
-if (text !== '') {
-	addTodo(text)
-	input.value = ''
-	input.focuse()
-}
-
-// function which will to add item
 let todoItems = []
 
 function addTodo(text) {
@@ -25,6 +10,17 @@ function addTodo(text) {
 	todoItems.push(todo)
 	console.log(todoItems)
 }
-//
 
-addTodo('hello')
+const form = document.querySelector('.js-form')
+form.addEventListener('sumbit', e => {
+	e.preventDefault()
+
+	const input = document.querySelector('js-todo-input')
+
+	const text = input.value.trim()
+	if (text !== '') {
+		add(text)
+		input.value = ''
+		input.focuse()
+	}
+})
