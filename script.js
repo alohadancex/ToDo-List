@@ -1,6 +1,6 @@
 const form = document.getElementById('form')
 const input = document.getElementById('input')
-const todoList = document.getElementById('todo')
+const todoUL = document.getElementById('todo')
 
 form.addEventListener('submit', event => {
 	event.preventDefault()
@@ -11,6 +11,12 @@ if (text !== '') {
 	addTodo(text)
 	input.value = ''
 	input.focuse()
+}
+
+function renderTodo(todo) {
+	const isCheked = todo.checked ? 'done' : ''
+	const node = document.createElement('li')
+	console.log(node)
 }
 
 // function which will to add item
@@ -26,7 +32,7 @@ function addTodo(text) {
 	todoItems.push(todo)
 	console.log(todoItems)
 }
-
-addTodo('hello')
-
 //
+
+renderTodo('hello')
+addTodo('hello')
